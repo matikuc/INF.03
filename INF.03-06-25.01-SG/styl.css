@@ -1,0 +1,44 @@
+body{
+    font-family: Georgia;
+    color:white
+}
+header, footer{
+    background-color: #824555;
+    text-align: center;
+    padding: 20px;
+}
+nav,aside{
+    width: 30%;
+    height: 350px;
+}
+nav{
+    background-color: #a26475;
+    float: left;
+}
+aside{
+    background-color: #824555;
+    float: left;
+
+}
+article{
+    background-color: #a26470;
+    width: 40%;
+    height: 350px;
+    overflow-y: auto;
+    overflow-x: auto;
+    float: left;
+}
+img{
+    float: left;
+    width: 50px;
+}
+table,p,dt{
+    margin: 10px;
+}
+dt{
+    padding-top: 20px;
+}
+th,td{
+    border: solid 3px #824555;
+    padding: 5px;
+}

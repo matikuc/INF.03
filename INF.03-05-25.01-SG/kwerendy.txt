@@ -1,0 +1,4 @@
+SELECT `data`,`temat` from `szkolenia` order by `data` asc; 
+SELECT `data`,`temat` from `szkolenia` JOIN `trenerzy` on `trenerzy`.`Id` = `Id_trenera`; 
+SELECT Imie, Nazwisko, COUNT(*) FROM trenerzy JOIN szkolenia ON trenerzy.Id = Id_trenera GROUP by `id_trenera`; 
+ALTER TABLE `zapisy` CHANGE COLUMN Id_klienta id_sluchacza int; 

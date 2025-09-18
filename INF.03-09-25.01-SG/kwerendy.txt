@@ -1,0 +1,4 @@
+SELECT `pasmo`, `nazwa_gory`,`wysokosc` from `gory` ORDER by `wysokosc` DESC limit 10; 
+SELECT `nazwisko`,`imie`,`funkcja`,`email` from `osoby`; 
+INSERT INTO `osiagniecia`(`gora_id`, `osoba_id`, `data_zdobycia`) VALUES ('182','4','2024-06-08'); 
+INSERT INTO `osoby`(`nazwisko`, `imie`, `funkcja`, `email`) VALUES ('M.','Miłosz','uczestnik','m.milosz@zdobywcyxyz.pl'); 

@@ -1,0 +1,4 @@
+SELECT data FROM imieniny WHERE imiona LIKE "%Karola%";
+SELECT imiona FROM imieniny WHERE data = "05-04";
+SELECT COUNT(data) FROM imieniny WHERE imiona LIKE "%mir%";
+ALTER TABLE imieniny ADD COLUMN zyczenia VARCHAR(500);

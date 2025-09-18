@@ -1,0 +1,4 @@
+SELECT `pseudonim` FROM `zawodnicy` WHERE `data_zdobycia` like "2020-07-%"; 
+SELECT `pseudonim`,`tytul` FROM `zawodnicy` WHERE `klasa` = "3A"; 
+SELECT `pseudonim`,`klasa`,`ranking` FROM `zawodnicy` order by `ranking` asc limit 10; 
+SELECT `pseudonim`,`data_zdobycia`, datediff(CURRENT_DATE(), data_zdobycia) as dni FROM `zawodnicy` where tytul is not null; 
