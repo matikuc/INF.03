@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "kalendarz");
+   // $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "kalendarz");
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +17,7 @@
 
         <div id="napis">
             <?php
+            $conn=mysqli_connect('localhost','root','','kalendarz')
                 // Skrypt #1
                 $miesiac = date("m-d");
 
@@ -101,8 +102,8 @@
                     $format = date("m-d", strtotime($_POST["data"]));
                     
                     $sql = "SELECT imiona FROM imieniny WHERE data = '$format';";
-                    $result = $conn->query(query: $sql);
-                    while($row = $result -> fetch_array()) {
+                    $result = mysqli_query($conn,$sql)
+                    while($row = mysqli_fetch_array($result)) {
                         $imieniny = $row[0];
                     }
 
