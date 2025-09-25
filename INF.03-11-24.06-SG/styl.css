@@ -1,0 +1,47 @@
+*{
+    font-family: Helvetica;
+  
+}
+header, footer{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+nav{
+    background-color: peru;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+    float: left;
+}
+main{
+   background-color: white;
+    width: 80%;
+    height: 700px;
+    font-size: 120%;
+    overflow-y: auto;
+    float: left;
+   
+}
+article{
+    background-color: peru;
+    color: white;
+    width: 20%;
+    height: 760px;
+    float: right;
+}
+a{
+    color: #DDD;
+    padding-left: 90px;
+    font-size: 140%;
+    text-decoration: none;
+
+}
+a:hover{
+    color: white;
+}
+img{
+    float: left;
+    margin: 30px;
+}
