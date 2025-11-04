@@ -70,5 +70,6 @@
     <footer>
     <p><img src="obraz2.png" alt="Przychodnia">Stronę przygtował:XXXXXXXX</p>
     </footer> 
+    <?php mysqli_close($connect); ?>
 </body>
 </html>
