@@ -1,0 +1,5 @@
+SELECT `nazwa` FROM `miejsca` ORDER BY `nazwa` asc; 
+SELECT `cena` FROM `miejsca` where `nazwa` like "Malbork"; 
+SELECT `nazwa`, `cena`, `link_obraz` FROM `miejsca` WHERE `link_obraz` like "0%"; 
+SELECT `nazwa`, round(COUNT(`wycieczki`.`liczba_doroslych`),0) FROM `miejsca` JOIN `wycieczki` ON `miejsca`.`id_miejsca`= `wycieczki`.`id_miejsca` GROUP BY `miejsca`.`nazwa`; 
+CREATE TABLE klienci(id_klienta UNSIGNED INT PRIMARY KEY AUTO_INCREMENT NOT NULL, imie VARCHAR(20), nazwisko VARCHAR(40), data_ur DATE);

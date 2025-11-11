@@ -1,0 +1,56 @@
+*{
+    font-family: 'Trebuchet MS', sans-serif;
+}
+aside{
+    background-color: #C5CAE9;
+    width: 40%;
+    height: 600px;
+    overflow: auto;
+    overflow-y: auto;
+    overflow-x: auto;
+    float: left;
+}
+section{
+    height: 300px;
+    width: 60%;
+    float: right;
+
+}
+.oponaDnia{
+    background-color: #9fa8da;
+    float: right;
+}
+.najnowszeZamowienia{
+    background-color: #7986cb;
+    float: right;
+}
+footer{
+    background-color: #283593;
+    color: white;
+    padding: 20px;
+    clear: both
+
+}
+div.opona{
+    background-color: #9fa8da;
+    margin: 40px;
+    border: dotted 2px #283593;
+    border-radius: 30px;
+
+
+}
+img{
+    float: left;
+    padding: 20px;
+
+}
+h2{
+    text-align: center;
+    margin: 0px;
+    padding: 15px;
+}
+h3{
+    background-color: #7986cb;
+    color: white;
+    font-size: 140%;
+}
