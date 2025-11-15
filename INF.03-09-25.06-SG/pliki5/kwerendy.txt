@@ -1,0 +1,5 @@
+SELECT avg(`liczba_pracownikow`) AS "średnia", MIN(`liczba_pracownikow`) AS "najmniejsza",MAX(`liczba_pracownikow`) AS "największa" FROM `wykonawcy`; 
+SELECT `nazwa_firmy`,`liczba_pracownikow` FROM `wykonawcy` WHERE `liczba_pracownikow` >= 40; 
+SELECT DISTINCT(`miasto`) FROM `klienci` ORDER BY `miasto` asc; 
+SELECT `klienci`.`imie`, `zlecenia`.`cena` FROM `klienci` JOIN `zlecenia` ON `zlecenia`.`id_klienta` = `klienci`.`id_klienta` WHERE `klienci`.`miasto` = "Poznań" AND `zlecenia`.`rodzaj` = "malowanie"; 
+SELECT `klienci`.`imie`,`wykonawcy`.`nazwa_firmy` FROM `klienci` JOIN `zlecenia` ON `klienci`.`id_klienta` = `zlecenia`.`id_klienta` JOIN `wykonanie` ON `wykonanie`.`id_zlecenia` = `zlecenia`.`id_zlecenia` JOIN `wykonawcy` ON `wykonawcy`.`id_wykonawcy` = `wykonanie`.`id_wykonawcy`; 
