@@ -1,0 +1,4 @@
+SELECT `id_zadania`,`zadanie`,`data` FROM `zadania`; 
+INSERT INTO `zadania`(`zadanie`, `data`, `osoba_id`) VALUES ('spotkanie firmowe','2024-05-10','1'); 
+DELETE FROM `zadania` WHERE `id_zadania` = "2"; 
+SELECT `osoby`.`imie`,`osoby`.`nazwisko`,`osoby`.`telefon`, `zadania`.`zadanie` FROM `osoby` JOIN `zadania` ON `zadania`.`osoba_id` = `osoby`.`id_osoba`; 
