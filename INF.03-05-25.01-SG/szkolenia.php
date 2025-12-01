@@ -22,7 +22,7 @@
         </nav>
         <main>
     <?php
-        $connection = mysqli_connect('localhost','root','','firma');
+        $connection = mysqli_connect('localhost','root','','firma')or die("BLąd");
         $query = "SELECT `data`,`temat` from `szkolenia` order by `data` asc;";
         $result = mysqli_query($connection, $query);
         while ($row = mysqli_fetch_row($result)){

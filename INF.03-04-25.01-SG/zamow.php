@@ -13,7 +13,7 @@
     <main>
         <h2>Zamówienie</h2>
         <?php
-        $connection = mysqli_connect('localhost','root','','obuwie');
+        $connection = mysqli_connect('localhost','root','','obuwie')or die("błąd");
         if(isset($_POST['model'])){
             $model = $_POST['model'];
             $rozmiar = $_POST['rozmiar'];

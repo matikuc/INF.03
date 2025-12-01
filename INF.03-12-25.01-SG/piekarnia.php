@@ -24,7 +24,7 @@
         <form method="post" action="piekarnia.php">
    <select name = 'select'>
       <?php
-         $connection = mysqli_connect("localhost","root","","piekarnia");
+         $connection = mysqli_connect("localhost","root","","piekarnia")or die("Błąd");
          $query= "SELECT DISTINCT `rodzaj` from `wyroby` ORDER by `rodzaj` desc";
         $result=mysqli_query($connection, $query);
        while( $row= mysqli_fetch_row($result)){

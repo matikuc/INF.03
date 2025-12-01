@@ -48,7 +48,7 @@
             <input type="text" id="email" name="email">
             <button id="wyślij" name="wyślij" value="Dodaj">Dodaj</button>
             <?php
-                 $connection = mysqli_connect("localhost","root","","zdobywcy");
+                 $connection = mysqli_connect("localhost","root","","zdobywcy")or die("Błąd");
                  if (isset($_POST["nazwisko"])) {
                     $nazwisko = $_POST["nazwisko"];
                     $imie = $_POST["imie"];

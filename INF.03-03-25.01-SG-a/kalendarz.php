@@ -17,7 +17,7 @@
 
         <div id="napis">
             <?php
-            $conn=mysqli_connect('localhost','root','','kalendarz')
+            $conn=mysqli_connect('localhost','root','','kalendarz')or die("Błąd");
                 // Skrypt #1
                 $miesiac = date("m-d");
 

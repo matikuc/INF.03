@@ -16,7 +16,7 @@
    <article><h3>Poznaj wszystkie rasy świnek morskich</h3>
     <ol>
         <?php
-            $connection = mysqli_connect('localhost','root','','hodowla');
+            $connection = mysqli_connect('localhost','root','','hodowla')or die("Błąd");
             $query = "SELECT `rasa` FROM `rasy`;";
             $result = mysqli_query($connection,$query);
             while($row = mysqli_fetch_row($result)){

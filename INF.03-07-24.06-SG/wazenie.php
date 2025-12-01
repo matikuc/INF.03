@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "wazenietirow");
+    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "wazenietirow") or die("Błąd");
 ?>
 
 <!DOCTYPE html>

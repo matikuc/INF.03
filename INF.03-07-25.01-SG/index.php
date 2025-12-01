@@ -29,7 +29,7 @@
                         $miasto = $_POST['miasto'];
                         echo "<p>$miasto</p>";
 
-                        $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "wykaz");
+                        $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "wykaz")or die("Błąd");
                         $sql = "SELECT miasta.nazwa AS miasta_nazwa, wojewodztwa.nazwa AS wojewodztwa_nazwa FROM miasta JOIN wojewodztwa ON wojewodztwa.id = id_wojewodztwa WHERE miasta.nazwa LIKE '$miasto%' ORDER BY miasta.nazwa;";
                         $result = $conn->query($sql);
 

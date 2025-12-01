@@ -28,7 +28,7 @@
                 </tr>
                
                     <?php
-                    $connect = mysqli_connect('localhost','root','','przewozy');
+                    $connect = mysqli_connect('localhost','root','','przewozy')or die("Błąd");
                     $query = "SELECT `id_zadania`,`zadanie`,`data` FROM `zadania`;";
                     $result = mysqli_query($connect,$query);
                     while($row = mysqli_fetch_array($result)){

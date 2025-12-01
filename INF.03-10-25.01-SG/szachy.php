@@ -25,7 +25,7 @@
         <table>
             <tr><th>Pozycja</th><th>Pseudonim</th><th>Tytuł</th><th>Ranking</th><th>Klasa</th></tr>
         <?php
-        $connection = mysqli_connect('localhost','root','','szachy');
+        $connection = mysqli_connect('localhost','root','','szachy')or die("Błąd");
         $query = "SELECT `pseudonim`,`tytul`,`ranking`,`klasa` FROM `zawodnicy` where `ranking` >2787 ORDER by `ranking` desc;";
         $result=mysqli_query($connection, $query);
         $i=1;
@@ -49,6 +49,7 @@
                 echo "$row[0]"."$row[1]"." ";
              }
             echo "</h4>";
+            mysqli_close($connection);
         }
         
         ?>

@@ -1,0 +1,55 @@
+*{
+    font-family: Arial, sans-serif;
+    text-align: center;
+
+}
+body{
+    background-color: LightCyan;
+}
+header, footer{
+    background-color: SteelBlue;
+    color: white;
+    padding: 10px;
+
+
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 800px) {
+    main{
+        flex-direction: row;
+    }
+    article{
+    padding: 40px;
+    margin: 1%;
+    width: 30%;
+}
+    }
+article#pierwszy{
+    background-color: DodgerBlue;
+}
+article#drugi{
+    background-color: limegreen;
+}
+article#trzeci{
+    background-color: darkorchid;
+}
+img{
+    width: 70%;
+}
+p{
+    padding: 20px;
+
+}
+table{
+    width: 70%;
+    border: solid 1px SteelBlue;
+}
+tr:hover{
+    background-color: steelblue;
+    color: white;
+}

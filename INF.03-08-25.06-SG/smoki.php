@@ -21,7 +21,7 @@
             <form action="smoki.php" method="post">
                 <select name="pochodzenie">
                     <?php
-                    $connection = mysqli_connect("localhost", "root", "", "smoki");
+                    $connection = mysqli_connect("localhost", "root", "", "smoki")or die("Błąd");
                     $query = "SELECT DISTINCT(`pochodzenie`) FROM `smok` ORDER BY `pochodzenie` ASC;";
                     $result = mysqli_query($connection, $query);
                     while ($row = mysqli_fetch_array($result)) {

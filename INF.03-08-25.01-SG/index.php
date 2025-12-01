@@ -22,7 +22,7 @@
         <table>
             <tr><th>Nr zamówienia</th><th>Nazwisko</th><th>Imię</th><th>Kolor</th><th>Pojemność [ml]</th><th>Data odbioru</th></tr>
         <?php
-        $connection = mysqli_connect("localhost","root","","mieszalnia");
+        $connection = mysqli_connect("localhost","root","","mieszalnia")or die("Błąd");
         if(isset($_POST['Wyszukaj'])){
             $dataod = $_POST['dataod'];
             $datado = $_POST['datado'];

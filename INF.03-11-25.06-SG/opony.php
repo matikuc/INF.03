@@ -13,7 +13,7 @@
     <main>
         <aside>
             <?php
-            $connect = mysqli_connect('localhost','root','','opony');
+            $connect = mysqli_connect('localhost','root','','opony')or die("Błąd");
             $query = "SELECT * from `opony` ORDER BY `opony`.`cena` ASC LIMIT 10;";
             $result = mysqli_query($connect, $query);
             while($row = mysqli_fetch_row($result)){

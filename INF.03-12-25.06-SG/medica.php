@@ -13,7 +13,7 @@
     </header>
     <article>
         <?php
-        $connect = mysqli_connect('localhost','root','','medica');
+        $connect = mysqli_connect('localhost','root','','medica')or die("Błąd");
         $query = "SELECT `nazwa`,`cena`,`opis` FROM `abonamenty`; ";
         $result = mysqli_query($connect, $query);
         while($row = mysqli_fetch_row($result)){

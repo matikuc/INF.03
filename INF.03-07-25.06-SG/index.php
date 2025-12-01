@@ -1,5 +1,5 @@
 <?php
-    $connect = mysqli_connect("localhost", "root", "", "wyprawy");
+    $connect = mysqli_connect("localhost", "root", "", "wyprawy") or die("Błąd");
 ?>
 <!DOCTYPE html>
 <html lang="pl">

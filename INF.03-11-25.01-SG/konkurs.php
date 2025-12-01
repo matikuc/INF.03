@@ -16,7 +16,7 @@
         <table>
             <tr><th>Nr</th><th>Nazwa</th><th>Opis</th><th>Wartość</th></tr>
             <?php 
-            $connection = mysqli_connect("localhost","root","","konkurs");
+            $connection = mysqli_connect("localhost","root","","konkurs")or die("Błąd");
             $query= "Select nazwa,opis,cena from nagrody order by rand() limit 5";
             $result = mysqli_query($connection, $query);
             $i = 1;

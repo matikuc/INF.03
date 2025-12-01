@@ -22,7 +22,7 @@
         <form action="biblioteka.php" method="post">
             <select name="liryka">
             <?php
-            $connection = mysqli_connect('localhost', 'root', '', 'biblioteka');
+            $connection = mysqli_connect('localhost', 'root', '', 'biblioteka') or die("Błąd");
             $query1 = "SELECT `id`,`tytul` FROM `ksiazka` WHERE `gatunek` = 'liryka'"; 
             $result = mysqli_query($connection, $query1);
             while($row = mysqli_fetch_row($result)){
@@ -50,7 +50,6 @@
         <form action="biblioteka.php" method="post">
             <select name="epika">
             <?php
-            $connection = mysqli_connect('localhost', 'root', '', 'biblioteka');
             $query4 = "SELECT `id`,`tytul` FROM `ksiazka` WHERE `gatunek` = 'epika'"; 
             $result = mysqli_query($connection, $query4);
             while($row = mysqli_fetch_row($result)){
@@ -78,7 +77,6 @@
         <form action="biblioteka.php" method="post">
             <select name="dramat">
             <?php
-            $connection = mysqli_connect('localhost', 'root', '', 'biblioteka');
             $query7 = "SELECT `id`,`tytul` FROM `ksiazka` WHERE `gatunek` = 'dramat'"; 
             $result7 = mysqli_query($connection, $query7);
             while($row = mysqli_fetch_row($result7)){
@@ -105,7 +103,6 @@
             <h2>Zaległe książki</h2>
             <ul>
             <?php
-            $connection = mysqli_connect('localhost', 'root', '', 'biblioteka');
             $query9 = "SELECT `ksiazka`.`tytul`,`ksiazka`.`id`,`wypozyczenia`.`data_odd` FROM `ksiazka` JOIN `wypozyczenia` ON `ksiazka`.`id` = `wypozyczenia`.`id_cz` ORDER BY `wypozyczenia`.`data_odd` ASC limit 15;"; 
             $result9 = mysqli_query($connection, $query9);
             while($row = mysqli_fetch_row($result9)){

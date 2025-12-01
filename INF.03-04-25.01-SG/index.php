@@ -15,7 +15,7 @@
             <label for="model">Model: </label>
             <select name="model" id="model" class="kontrolki">
                 <?php
-                $connection = mysqli_connect('localhost','root','','obuwie');
+                $connection = mysqli_connect('localhost','root','','obuwie')or die("błąd");
                 $query = "SELECT `model` FROM `produkt`; ";
                 $result = mysqli_query($connection,$query);
                 while($row = mysqli_fetch_row($result)){

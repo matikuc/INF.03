@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php
-    $connect = mysqli_connect('localhost','root','','szkolenia');
+    $connect = mysqli_connect('localhost','root','','szkolenia')or die("Błąd");
     ?>
     <header>
         <h1>Szkolenia</h1>  
