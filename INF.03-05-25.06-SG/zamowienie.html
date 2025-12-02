@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotografia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Fotografia artystyczna</h1>
+    </header>
+    <section id="obraz">
+        <img src="1.jpg" alt="obraz do sprzedaży">
+        <img src="2.jpg" alt="obraz do sprzedaży">
+        <img src="3.jpg" alt="obraz do sprzedaży">
+        <img src="4.jpg" alt="obraz do sprzedaży">
+        <img src="5.jpg" alt="obraz do sprzedaży">
+        <img src="6.jpg" alt="obraz do sprzedaży">
+        <img src="7.jpg" alt="obraz do sprzedaży">
+        <img src="8.jpg" alt="obraz do sprzedaży">
+        <img src="9.jpg" alt="obraz do sprzedaży">
+        <img src="10.jpg" alt="obraz do sprzedaży">
+    </section>
+    <main>
+        <section id="lewy">
+            <h3>Zamówienie</h3>
+            <label for="Obraz">Wybierz obraz:</label>
+            <input type="file" id="Obraz" accept="image/jpeg"><br>
+           <label for="liczbaKopii">Liczba Kopii:
+    <input type="number" id="liczbaKopii"></label>
+<label><input type="radio" value="błyszczący" checked>Papier błyszczący</label><br>
+            <label><input type="radio" value="matowy">Papier matowy</label><br>
+           <button onclick="Koszyk()">Dodaj do koszyka</button>
+
+            
+        </section>
+        <div id="conteiner">
+        <nav>
+            <ul>
+                <li><a href="regulamin.html">Reglamin</a></li>
+                <li><a href="uslugi.html">Usługi</a></li>
+                <li><a href="http://pixabay.com">Zdjęcia</a></li>
+            </ul>
+        </nav>
+        <section id="prawy">
+            <h3>Koszyk</h3>
+            <div id="koszyk">
+
+            </div>
+        </section>
+            </div>
+
+    </main>
+    <footer>
+        <p>Stronę wykonał: <em>XXXXXXXXX</em></p>
+    </footer>
+   <script>
+    function Koszyk(){
+        const file = document.getElementById("Obraz").files[0];
+        const liczbaKopii = Number(document.getElementById("liczbaKopii").value);
+        const papier = document.querySelector('input[type="radio"]:checked').value;
+
+        if (!file) {
+            alert("Wybierz obraz!");
+            return;
+        }
+        if (!liczbaKopii || liczbaKopii <= 0) {
+            alert("Podaj prawidłową liczbę kopii!");
+            return;
+        }
+
+        let cena = 0;
+        if(papier === "błyszczący"){
+            cena = liczbaKopii * 1.5;
+        }
+        if(papier === "matowy"){
+            cena = liczbaKopii * 2;
+        }
+
+        const nowezdjecie = document.createElement("img");
+        nowezdjecie.src = URL.createObjectURL(file);
+        nowezdjecie.style.width = "150px";
+
+        const nowyP1 = document.createElement("p");
+        nowyP1.innerText = `Liczba kopii: ${liczbaKopii}`;
+
+        const nowyP2 = document.createElement("p");
+        nowyP2.innerText = `Cena: ${cena} zł`;
+
+        const koszyk = document.getElementById("koszyk");
+        koszyk.appendChild(nowezdjecie);
+        koszyk.appendChild(nowyP1);
+        koszyk.appendChild(nowyP2);
+    }
+</script>
+
+    
+</body>
+</html>

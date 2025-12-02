@@ -1,0 +1,4 @@
+SELECT `nr_klienta`,`liczba_odbitek` FROM `zamowienia` WHERE `zamowienia`.`rodzaj` = "matowy" and `zamowienia`.`liczba_odbitek` > 100; 
+SELECT `liczba_odbitek` *`cena` as "Do zapłaty" FROM `zamowienia` JOIN `zdjecia` ON `zdjecia`.`rodzaj` =`zamowienia`.`rodzaj` WHERE `zamowienia`.`nr_klienta` = 3; 
+SELECT SUM(liczba_odbitek) FROM `zamowienia` WHERE `rodzaj` = "błyszczący"; 
+CREATE USER 'Anna'@'localhost' IDENTIFIED by '@NNa'; 
