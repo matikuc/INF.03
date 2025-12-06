@@ -63,10 +63,10 @@
 
 
         let cena = 0;
-        if(papier === "błyszczący"){
+        if(papier == "błyszczący"){
             cena = liczbaKopii * 1.5;
         }
-        if(papier === "matowy"){
+        if(papier == "matowy"){
             cena = liczbaKopii * 2;
         }
 
@@ -76,10 +76,10 @@
         
 
         const nowyP1 = document.createElement("p");
-        nowyP1.innerText = `Liczba kopii: ${liczbaKopii}`;
+        nowyP1.innerText = `Liczba kopii: ` + document.getElementById("liczbaKopii").value;
 
         const nowyP2 = document.createElement("p");
-        nowyP2.innerText = `Cena: ${cena} zł`;
+        nowyP2.innerText = `Cena: `+ cena ;
 
         const koszyk = document.getElementById("koszyk");
         koszyk.appendChild(nowezdjecie);
