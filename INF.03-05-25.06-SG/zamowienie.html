@@ -28,9 +28,9 @@
             <label for="Obraz">Wybierz obraz:</label>
             <input type="file" id="Obraz" accept="image/jpeg"><br>
            <label for="liczbaKopii">Liczba Kopii:
-    <input type="number" id="liczbaKopii"></label>
-<label><input type="radio" value="błyszczący" checked>Papier błyszczący</label><br>
-            <label><input type="radio" value="matowy">Papier matowy</label><br>
+    <input type="number" id="liczbaKopii"></label><br>
+<label><input type="radio" name="papier" value="błyszczący" checked>Papier błyszczący</label><br>
+            <label><input type="radio" name="papier" value="matowy">Papier matowy</label><br>
            <button onclick="Koszyk()">Dodaj do koszyka</button>
 
             
@@ -59,16 +59,8 @@
     function Koszyk(){
         const file = document.getElementById("Obraz").files[0];
         const liczbaKopii = Number(document.getElementById("liczbaKopii").value);
-        const papier = document.querySelector('input[type="radio"]:checked').value;
+        const papier = document.querySelector('input[name="papier"]:checked').value;
 
-        if (!file) {
-            alert("Wybierz obraz!");
-            return;
-        }
-        if (!liczbaKopii || liczbaKopii <= 0) {
-            alert("Podaj prawidłową liczbę kopii!");
-            return;
-        }
 
         let cena = 0;
         if(papier === "błyszczący"){
@@ -80,7 +72,8 @@
 
         const nowezdjecie = document.createElement("img");
         nowezdjecie.src = URL.createObjectURL(file);
-        nowezdjecie.style.width = "150px";
+        nowezdjecie.style.width = "70px";
+        
 
         const nowyP1 = document.createElement("p");
         nowyP1.innerText = `Liczba kopii: ${liczbaKopii}`;

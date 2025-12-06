@@ -60,6 +60,8 @@ img {
     float: left;
 }
 
+
+
 a {
     color: sienna;
     margin-right: 30px;
@@ -67,4 +69,9 @@ a {
 
 a:hover {
     color: #4C1900;
+}
+#koszyk{
+    clear: both;
+    display: block;
+    
 }
